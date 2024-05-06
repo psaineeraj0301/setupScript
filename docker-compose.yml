@@ -1,0 +1,12 @@
+# this only works if you have build file alone
+version: '3'
+
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./build:/usr/share/nginx/html
+    restart: always
+    
