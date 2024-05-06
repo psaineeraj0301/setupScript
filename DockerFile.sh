@@ -17,3 +17,11 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
 docker run hello-world
+
+# install docker-compose
+sudo curl -SL https://github.com/docker/compose/releases/download/v2.26.1/docker-compose-linux-x86_64 -o /tmp/docker-compose
+
+ls -lart /tmp/docker-compose
+sudo chmod +x /tmp/docker-compose
+tmp/docker-compose --version
+sudo mv /tmp/docker-compose /usr/local/bin
