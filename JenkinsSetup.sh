@@ -12,15 +12,17 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 sudo apt-get update -y
 sudo apt-get install jenkins -y
+
+# Run this cmd to get ssh keys from manual
+# copy this key from terminal and paste in jenkins key-management for github
+ssh-keyscan -H github.com
 ###
+
+# Run the below two cmds only if you want to run jenkins o port 8081
 # Find the Jenkins WAR file and store the path in a variable
-javawarpath=$(sudo find / -name jenkins.war)
-
-# Check if Jenkins WAR file was found
-if [ -z "$javawarpath" ]; then
-    echo "Jenkins WAR file not found."
-    exit 1
-fi
-
+# uncomment below line
+# javawarpath=$(sudo find / -name jenkins.war)
 # Run Jenkins using the Java executable and the path to the WAR file
-sudo java -jar "$javawarpath" --httpPort=8081
+# uncomment below line
+# sudo java -jar "$javawarpath" --httpPort=8081
+###
