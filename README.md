@@ -1,8 +1,8 @@
 # setupScript
 
-// Docker permission //
-ls -l /var/run/docker.sock
-sudo chmod 666 /var/run/docker.sock
-sudo systemctl restart docker 
-sudo systemctl status docker
-sudo systemctl restart jenkins
+**_Docker permission_**<br>
+ls -l /var/run/docker.sock <br>
+sudo chmod 666 /var/run/docker.sock <br>
+sudo systemctl restart docker <br>
+sudo systemctl status docker <br>
+sudo systemctl restart jenkins <br>
